@@ -1,0 +1,35 @@
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 40px 56px 40px 56px;
+  gap: 10px;
+}
+
+.swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: scale(0.5);
+  opacity: 0;
+  border: 2px solid #ffe500;
+  border-radius: inherit;
+  transition: 0.22s ease-in;
+}
+
+@media (max-width: 1024px) {
+  .swiper-pagination {
+    margin: 30px 40px 30px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper-pagination {
+    margin: 10px 16px 10px 16px;
+    justify-content: center;
+  }
+}
