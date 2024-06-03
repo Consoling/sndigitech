@@ -32,7 +32,8 @@ const Footer = () => {
               USA Office
             </span>
           </div>
-          <div className="flex flex-wrap font-raleway text-white py-7 justify-center items-center w-full text-center">
+          <div className="flex-col flex justify-start">
+          <div className="flex flex-wrap font-raleway text-white py-7 justify-start w-full ">
             <span className="font-raleway">
               208 N Townsend St, Syracuse, New York 13203, USA
             </span>
@@ -56,6 +57,7 @@ const Footer = () => {
             <p className="text-[#e1e507]">Phone:</p><a href="tel:+1 (917) 740 8964" className="hover:underline">+1 (917) 740 8964</a>
             </span>
           </div>{" "}
+          </div>
         </div>
 
         <div className="flex flex-col ">
@@ -65,6 +67,32 @@ const Footer = () => {
               Canada Office
             </span>
           </div>
+          <div className="flex-col flex justify-start">
+          <div className="flex flex-wrap font-raleway text-white py-7 justify-start w-full ">
+            <span className="font-raleway">
+            Unit No.05, 10142 Semiahmoo Rd, Surrey, British Columbia, Canada V3T3N3
+            </span>
+          </div>
+          <div className="flex flex-wrap flex-col py-4 ">
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+              <p className="text-[#e1e507]">Weekdays:</p>9:00 AM - 5:00 PM
+            </span>
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+              <p className="text-[#e1e507]">Weekends:</p>
+              Closed
+            </span>
+          </div>
+          <div className="flex flex-wrap flex-col py-4 ">
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+            <p className="text-[#e1e507]">Email:</p><a href="mailto:admin@sndigitech.com" className="hover:underline">admin@sndigitech.com</a>
+            </span>
+          </div>{" "}
+          <div className="flex flex-wrap flex-col py-4 ">
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+            <p className="text-[#e1e507]">Phone:</p><a href="tel:+1 (917) 720-3848" className="hover:underline">+1 (917) 720-3848</a>
+            </span>
+          </div>{" "}
+          </div>
         </div>
 
         <div className="flex flex-col ">
@@ -73,6 +101,32 @@ const Footer = () => {
             <span className="font-raleway text-[#e1e507] font-semibold text-[20px]">
               India Office
             </span>
+          </div>
+          <div className="flex-col flex justify-start">
+          <div className="flex flex-wrap font-raleway text-white py-7 justify-start w-full ">
+            <span className="font-raleway">
+            OC 840-841, Gaur City Centre, Greater Noida West, U.P., India - 203207
+            </span>
+          </div>
+          <div className="flex flex-wrap flex-col py-4 ">
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+              <p className="text-[#e1e507]">Weekdays:</p>10:00 AM - 6:00 PM
+            </span>
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+              <p className="text-[#e1e507]">Weekends:</p>
+              Closed
+            </span>
+          </div>
+          <div className="flex flex-wrap flex-col py-4 ">
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+            <p className="text-[#e1e507]">Email:</p><a href="mailto:admin@sndigitech.com" className="hover:underline">admin@sndigitech.com</a>
+            </span>
+          </div>{" "}
+          <div className="flex flex-wrap flex-col py-4 ">
+            <span className="font-raleway flex flex-row items-center justify-start gap-4">
+            <p className="text-[#e1e507]">Phone:</p><a href="tel:+91 8607317191" className="hover:underline">+91 8607317191</a>
+            </span>
+          </div>{" "}
           </div>
         </div>
       </div>
@@ -113,6 +167,7 @@ const Footer = () => {
             </span>
           </div>
         </div>
+        
       </div>
     </section>
   );
