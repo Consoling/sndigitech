@@ -12,7 +12,7 @@ const Awards = () => {
       </div>
 
       <div className="flex flex-row lg:w-[64%] max-[1024px]:h-[50%] max-[1024px]:w-full flex-wrap lg:pr-20 max-[768px]:mt-8  lg:py-14 py-5 max-[1024px]:gap-10 gap-5">
-        <h1 className="text-[40px] font-raleway text-[#151515] font-bold lg:leading-relaxed px-20 pb-0 pt-10 tracking-wide max-[550px]:leading-snug max-[550px]:font-semibold max-[550px]:text-[32px] max-[550px]:px-5 ">
+        <h1 className="text-[40px] font-raleway text-[#151515] font-bold lg:leading-normal px-20 pb-0 pt-10 tracking-wide max-[550px]:leading-snug max-[550px]:font-semibold max-[550px]:text-[32px] max-[550px]:px-5 ">
           SN Digitech Pvt. Ltd. Ranked as Top 30 Digital Marketing Agency in New
           York in 2021
         </h1>
