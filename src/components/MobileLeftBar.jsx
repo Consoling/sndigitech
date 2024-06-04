@@ -4,6 +4,8 @@ import { ChevronDown, Menu } from "lucide-react";
 
 import { motion } from "framer-motion";
 
+import { service1, service2, service3 } from "../../constants/constant";
+
 const MobileLeftBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -61,274 +63,95 @@ const MobileLeftBar = () => {
                       <div className="flex py-2 border-b-2 mb-4 text-[#e1e507]">
                         Services We Provide
                       </div>
-                      <div className="flex flex-col gap-3 leading-loose font-semibold text-sm">
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
+                      {service1.map((item) => (
+                        <div
+                          className="flex flex-col gap-3 leading-loose font-semibold text-sm"
+                          key={item.id}
                         >
-                          Digital Marketing
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Digital Strategy & Planning
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Performance Marketing
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Creative UI/UX Design
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          E-Commerce Services
-                        </motion.span>
-                      </div>
+                          <motion.a
+                            className="py-3"
+                            whileHover={{
+                              rotateX: 360,
+                              boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
+                              transition: { duration: 0.5, ease: "easeInOut" },
+                              paddingLeft: 5,
+                            }}
+                            initial={{ rotateX: 0 }}
+                            animate={{ rotateX: 360 }}
+                            href={`/services/${item.pathId}`}
+                          >
+                            <motion.span className="font-raleway tracking-wide cursor-pointer">
+                              {item.name}
+                            </motion.span>
+                          </motion.a>
+                        </div>
+                      ))}
                     </div>
                     <div className="flex-1 my-4">
                       <div className="flex py-2 border-b-2 mb-4 text-[#e1e507]">
                         Digital Marketing
                       </div>
-                      <div className="flex flex-col gap-3 leading-loose font-semibold text-sm">
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Search Engine Optimization
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Social Media Marketing
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          PPC Marketing
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Email Marketing
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Video/ App/ Content Marketing
-                        </motion.span>
-                      </div>
+                      {service2.map((item) => {
+                        return (
+                          <div
+                            className="flex flex-col gap-3 leading-loose font-semibold text-sm"
+                            key={item.id}
+                          >
+                            <motion.a
+                              className="py-3"
+                              whileHover={{
+                                rotateX: 360,
+                                boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
+                                transition: {
+                                  duration: 0.5,
+                                  ease: "easeInOut",
+                                },
+                                paddingLeft: 5,
+                              }}
+                              initial={{ rotateX: 0 }}
+                              animate={{ rotateX: 360 }}
+                              href={`/services/${item.pathId}`}
+                            >
+                              <motion.span className="font-raleway tracking-wide cursor-pointer">
+                                {item.name}
+                              </motion.span>
+                            </motion.a>
+                          </div>
+                        );
+                      })}
                     </div>
                     <div className="flex-1 my-4">
                       <div className="flex py-2 border-b-2 mb-4 text-[#e1e507]">
                         Website/Software
                       </div>
-                      <div className="flex flex-col gap-3 leading-loose font-zemibold text-sm">
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Website Design and Development
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Web Application Development
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Software Development
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Mobile App Development
-                        </motion.span>
-
-                        <motion.span
-                          className="font-raleway tracking-wide cursor-pointer"
-                          whileHover={{
-                            rotateX: 360,
-                            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut",
-                            },
-                            paddingLeft: 5,
-                          }}
-                          initial={{ rotateX: 0 }}
-                          animate={{ rotateX: 0 }}
-                        >
-                          Blockchain Development
-                        </motion.span>
-                      </div>
+                      {service3.map((item) => {
+                        return (
+                          <div
+                            className="flex flex-col gap-3 leading-loose font-semibold text-sm"
+                            key={item.id}
+                          >
+                            <motion.a
+                              className="py-3"
+                              whileHover={{
+                                rotateX: 360,
+                                boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)",
+                                transition: {
+                                  duration: 0.5,
+                                  ease: "easeInOut",
+                                },
+                                paddingLeft: 5,
+                              }}
+                              initial={{ rotateX: 0 }}
+                              animate={{ rotateX: 360 }}
+                              href={`/services/${item.pathId}`}
+                            >
+                              <motion.span className="font-raleway tracking-wide cursor-pointer">
+                                {item.name}
+                              </motion.span>
+                            </motion.a>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </motion.div>
