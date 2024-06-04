@@ -2,6 +2,7 @@ import { ChevronDown, EllipsisVertical, Menu } from "lucide-react";
 import React from "react";
 import MobileRightBar from "./MobileRightBar";
 import MobileLeftBar from "./MobileLeftBar";
+import ServicesDropdown from "./ServicesDropdown";
 
 const Navbar = () => {
   return (
@@ -26,17 +27,8 @@ const Navbar = () => {
           <li className="flex items-center justify-center  hover:border-2 border-gray-400 transition-all ease-in-out duration-100  px-2 py-1 w-[130px]">
             <a href="/about-us">About Us</a>
           </li>
-          <li className="flex items-center justify-center group  hover:border-2 border-gray-400 transition-all ease-in-out duration-100 px-2 py-1 w-[130px]">
-            <a
-              href="/services"
-              className="flex gap-2 items-center justify-end "
-            >
-              Services{" "}
-              <ChevronDown
-                size={15}
-                className="group-hover:rotate-180 transition-all ease duration-300"
-              />{" "}
-            </a>{" "}
+          <li className="flex items-center justify-center group  hover:border-2 h-[55px] border-gray-400 transition-all ease-in-out duration-100 px-2 py-1 w-[130px]">
+          <ServicesDropdown />
           </li>
           <li className="flex items-center justify-center  hover:border-2 border-gray-400 transition-all ease-in-out duration-100  px-2 py-1 w-[130px]">
             <a href="/portfolio">Portfolio</a>
