@@ -1,11 +1,11 @@
 import React from "react";
 import { BallTriangle, ProgressBar } from "react-loader-spinner";
-
+import '../src/globals.css'
 const PreLoader = () => {
   return (
-    <>
-      <div className="flex-col h-screen w-screen justify-center items-center">
-        <div className="flex flex-col gap-10 px-10 items-center justify-center h-full">
+    <div className="loader__outer__container">
+      
+        <div className="loader__inner__container">
           <img
             src="snDigitech_logo120x47.png"
             alt="snDTLogo"
@@ -17,11 +17,11 @@ const PreLoader = () => {
           width= '80'
           barColor='#e1e507'
           
-          
+          wrapperClass="progress-bar-loading"
         />
         </div>
-      </div>
-    </>
+      
+    </div>
   );
 };
 

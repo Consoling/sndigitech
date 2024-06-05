@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     
     async function closeLoader() {
-      await new Promise((resolve) => setTimeout(resolve, 5000));
+      await new Promise((resolve) => setTimeout(resolve, 8000));
       setLoading(false);
     }
 
@@ -22,7 +22,9 @@ const App = () => {
   }, [loading]);
   return loading && location === '/' ? (
     
+    <>
      <PreLoader />
+    </>
     
   ) : (
     <>

@@ -18,6 +18,9 @@ module.exports = {
     },
     fontFamily: { raleway: "Raleway" },
     extend: {
+      backgroundImage: {
+        parallax: 'url("../public/about/parallax-2.jpg")',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
