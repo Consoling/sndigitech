@@ -20,7 +20,14 @@ import {
 const whychsUs = [
   {
     icon: <Focus size={40} className="text-[#e1e507]" />,
+    id: 1,
+    name: "Customer Focused",
+    description:
+    "At SN Digitech, we always provide best-in-class solutions while fostering a profitable, disciplined culture of safety, service, and trust.",
+  },
+  {
     id: 2,
+    icon: <Lightbulb size={40} className="text-[#e1e507]" />,
     name: "Innovative & Passionate",
     description:
       "SN Digitech's team of talented SEO analysts, highly experienced digital marketers, innovative web designers and developers, who are always passionate about their work",
