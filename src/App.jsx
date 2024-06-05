@@ -1,30 +1,32 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, RouterProvider, Routes, useLocation } from "react-router-dom";
 
-// Layout
-import Layout from "./layout/Layout";
 
-// Pages
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Services from '../pages/Services'
-import Portfolio from '../pages/Portfolio'
-import Industries from '../pages/Industries'
-import ContactUs from '../pages/ContactUs' 
+
+
+import PreLoader from "../preloader/PreLoader";
+import { router } from "../routes/routes";
 
 const App = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+  const location = window.location.pathname;
+
+  useEffect(() => {
+    
+    async function closeLoader() {
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+      setLoading(false);
+    }
+
+    closeLoader();
+  }, [loading]);
+  return loading && location === '/' ? (
+    
+     <PreLoader />
+    
+  ) : (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/about-us" element={<About />} />
-          <Route path="/services/:pathId" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-        </Route>
-      </Routes>
+    <RouterProvider router={router}/>
     </>
   );
 };
