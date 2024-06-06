@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
-
+import '../globals.css'
 import { motion } from "framer-motion";
 
 import { service1, service2, service3 } from "../../constants/constant";
@@ -21,9 +21,9 @@ const MobileLeftBar = () => {
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="bg-white overflow-y-scroll max-h-full"
+          className="bg-white overflow-y-scroll max-h-full w-full scrollbar__menu"
         >
-          <div className="flex flex-col my-10 overflow-y-scroll">
+          <div className="flex flex-col my-10">
             <ul className="flex flex-col h-full gap-7 items-center text-[#222] font-semibold">
               <li className="w-full">
                 {" "}
@@ -58,7 +58,7 @@ const MobileLeftBar = () => {
                   exit={{ opacity: 0, y: "-100%" }}
                   transition={{ type: "spring", stiffness: 100 }}
                 >
-                  <div className="flex  flex-col py-5 gap-10 overflow-y-scroll">
+                  <div className="flex  flex-col items-center py-5 gap-10 overflow-y-scroll scrollbar__menu">
                     <div className="flex-1 my-4">
                       <div className="flex py-2 border-b-2 mb-4 text-[#e1e507]">
                         Services We Provide

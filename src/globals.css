@@ -1,9 +1,16 @@
-.swiper-pagination {
+.mySwiper .swiper-pagination {
   display: flex;
   align-items: center;
   justify-content: start;
   margin: 40px 56px 40px 56px;
   gap: 10px;
+}
+
+.serviceSwiper .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .swiper-pagination-bullet::after {
@@ -76,4 +83,21 @@
 
 .progress-bar-loading  {
   width: 500px;
+}
+
+
+
+.scrollbar__menu::-webkit-scrollbar {
+  width: 8px;
+  background-color: #dcdcdc;
+}
+
+.scrollbar__menu::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #dcdcdc;
+}
+
+.scrollbar__menu:hover::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: #dcdcdc;
 }

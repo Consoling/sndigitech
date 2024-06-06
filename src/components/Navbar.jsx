@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex items-center justify-center max-[1200px]:hidden">
-          <button className="bg-[#e1e507] uppercase text-[#222] text-sm font-semibold px-3 py-2.5 rounded-md hover:shadow-xl duration-300 transition-all ease-in-out">
+          <button className="bg-snyellow uppercase text-[#222] text-sm font-semibold px-3 py-2.5 rounded-md hover:shadow-xl duration-300 transition-all ease-in-out">
             <a href="">Get a quote</a>
           </button>
         </div>

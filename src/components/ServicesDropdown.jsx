@@ -25,10 +25,10 @@ const ServicesDropdown = () => {
                 Services{" "}
               </a>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-[#f5f5f5] border-t-[1px] border-[#e1e507] rounded-lg bg-opacity-100">
+            <NavigationMenuContent className="bg-[#f5f5f5] border-t-[1px] border-snyellow rounded-lg bg-opacity-100">
               <div className="flex w-[980px] px-14 py-5 gap-10">
                 <div className="flex-1 my-4">
-                  <div className="flex py-2 border-b-2 mb-4 text-[#e1e507]">
+                  <div className="flex py-2 border-b-2 mb-4 text-snyellow">
                     Services We Provide
                   </div>
                   {service1.map((item) => (
@@ -56,7 +56,7 @@ const ServicesDropdown = () => {
                   ))}
                 </div>
                 <div className="flex-1 my-4">
-                  <div className="flex py-2 border-b-2 mb-4 text-[#e1e507]">
+                  <div className="flex py-2 border-b-2 mb-4 text-snyellow">
                     Digital Marketing
                   </div>
                  {service2.map((item) => {
@@ -88,7 +88,7 @@ const ServicesDropdown = () => {
                  })}
                 </div>
                 <div className="flex-1 my-4">
-                  <div className="flex py-2 border-b-2 mb-4 text-[#e1e507]">
+                  <div className="flex py-2 border-b-2 mb-4 text-snyellow">
                     Website/Software
                   </div>
                 {service3.map((item) => {
