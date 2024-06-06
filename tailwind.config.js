@@ -22,6 +22,7 @@ module.exports = {
         parallax: 'url("../public/about/parallax-2.jpg")',
       },
       colors: {
+        snyellow: '#ffe500',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
