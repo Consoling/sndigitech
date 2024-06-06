@@ -52,15 +52,15 @@ const PortfolioDetails = () => {
           <img src={background} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="absolute flex lg:flex-row flex-col max-[1023px]:py-20  w-full h-full">
-          <div className="flex justify-center items-center lg:w-[50%] max-[1023px]:h-[20%] ">
-            <div className="flex flex-col px-20">
+          <div className="flex justify-center items-center lg:w-[50%] max-[1023px]:h-[20%] max-[768px]:h-[40%]">
+            <div className="flex flex-col md:px-20 md:pb-0 pb-10 px-10">
               <h1 className={`font-semibold text-4xl ${item.id === 'kashi-creation' || item.id === 'christopher-twele'? 'text-[#1f1f1f] font-medium': 'text-[#fff]'}`} >{name}</h1>
               <span className={`text-sm  leading-relaxed pt-5 font-raleway ${item.id === 'kashi-creation' || item.id === 'christopher-twele' ? 'text-[#1f1f1f] font-medium': 'text-[#fff]'}`}>
                 {description}
               </span>
             </div>
           </div>
-          <div className="flex flex-col lg:w-[50%] justify-center items-center  max-[1023px]:h-[80%]">
+          <div className="flex flex-col lg:w-[50%] justify-center items-center  max-[1023px]:h-[80%] max-[768px]:h-[60%]">
           <div className="flex flex-col items-center justify-center px-20 py-5 w-full h-full">
           <Swiper
               slidesPerView={1}
