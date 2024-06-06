@@ -22,6 +22,7 @@ body {
   background-color: #fff;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: subpixel-antialiased;
+  height: 100%;
 }
 
 

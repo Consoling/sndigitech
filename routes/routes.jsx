@@ -8,6 +8,7 @@ import Portfolio from "../pages/Portfolio";
 import PortfolioDetails from "../src/components/PortfolioDetails";
 import Industries from "../pages/Industries";
 import ContactUs from "../pages/ContactUs";
+import PageLoader from "../preloader/PageLoader";
 
 export const router = createBrowserRouter([
   {
@@ -17,13 +18,12 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
-      },
+        element: <Home />, },
       { path: "/about-us", element: <About /> },
       { path: "/services/:pathId", element: <Services /> },
-      { path: "/portfolio", element: <Portfolio /> },
+      { path: "/portfolio", element: <Portfolio />},
       { path: "/portfolio/:link", element: <PortfolioDetails /> },
-      { path: "/industries", element: <Industries /> },
+      { path: "/industries", element: <Industries />},
       { path: "/contact-us", element: <ContactUs /> },
 
     ],
