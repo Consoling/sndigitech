@@ -79,7 +79,7 @@ const ContactContent = () => {
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
-                    <BreadcrumbLink className="text-[#e1e507]" href="/">
+                    <BreadcrumbLink className="text-snyellow" href="/">
                       Home
                     </BreadcrumbLink>
                   </BreadcrumbItem>
@@ -110,11 +110,11 @@ const ContactContent = () => {
             projects.
           </span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col border-none">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-8  rounded-[5px] bg-transparent backdrop-blur-lg shadow-md border w-full px-4 md:px-10 h-auto py-10 my-10 "
+              className="space-y-8  rounded-[5px] bg-transparent backdrop-blur-lg  border w-full px-4 md:px-10 h-auto py-10 my-10 border-none shadow-none "
             >
               <div className="flex lg:flex-row flex-col gap-10 lg:justify-center ">
                 <FormField
@@ -198,7 +198,7 @@ const ContactContent = () => {
 
                 <Button
                   type="submit"
-                  className="h-12 px-24 py-2  bg-snyellow text-black font-semibold uppercase tracking-widest"
+                  className="h-12 px-24 py-2  bg-snyellow hover:bg-snyellow hover:shadow-lg duration-300 ease-out transition-all text-black font-semibold uppercase tracking-widest"
                 >
                   Submit
                 </Button>

@@ -8,6 +8,7 @@ import Portfolio from "../pages/Portfolio";
 import PortfolioDetails from "../src/components/PortfolioDetails";
 import Industries from "../pages/Industries";
 import ContactUs from "../pages/ContactUs";
+import Quote from "../pages/Quote";
 import PageLoader from "../preloader/PageLoader";
 
 export const router = createBrowserRouter([
@@ -25,6 +26,8 @@ export const router = createBrowserRouter([
       { path: "/portfolio/:link", element: <PortfolioDetails /> },
       { path: "/industries", element: <Industries />},
       { path: "/contact-us", element: <ContactUs /> },
+      { path: "/get-quote", element: <Quote /> },
+
 
     ],
   },

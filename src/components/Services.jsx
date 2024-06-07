@@ -13,42 +13,42 @@ import "../globals.css";
 const serviceList = [
   {
     id: 1,
-    icon: <Smartphone size={40} className="text-[#e1e507]" />,
+    icon: <Smartphone size={40} className="text-snyellow" />,
     name: "Mobile App Development",
     description:
       "Being a mobile app development company, we understand the complexities of the industry and mobile application development. Let SN Digitech become your partner in creating a beautiful mobile experience.",
   },
   {
     id: 2,
-    icon: <MonitorDot size={40} className="text-[#e1e507]" />,
+    icon: <MonitorDot size={40} className="text-snyellow" />,
     name: "Website Design and Development",
     description:
       "Allow SN Digitech to create a memorable first impression for your online audience. Our team delivers cutting-edge websites that are beautiful to look at and perform equally well.",
   },
   {
     id: 3,
-    icon: <MonitorCheck size={40} className="text-[#e1e507]" />,
+    icon: <MonitorCheck size={40} className="text-snyellow" />,
     name: "Saas Development",
     description:
       "Being a mobile app development company, we understand the complexities of the industry and mobile application development. Let SN Digitech become your partner in creating a beautiful mobile experience.",
   },
   {
     id: 4,
-    icon: <Box size={40} className="text-[#e1e507]" />,
+    icon: <Box size={40} className="text-snyellow" />,
     name: "AR/VR Development",
     description:
       "Augmented Reality (AR) and Virtual Reality (VR) Development involves creating immersive digital experiences that blend the virtual world with the real one.",
   },
   {
     id: 5,
-    icon: <Link size={40} className="text-[#e1e507]" />,
+    icon: <Link size={40} className="text-snyellow" />,
     name: "Blockchain Development",
     description:
       "At SN Digitech, We develop comprehend enterprise needs and build web solutions conforming to the end-customers experience in Blockchain Development.",
   },
   {
     id: 6,
-    icon: <GrAnnounce size={40} className="text-[#e1e507]" />,
+    icon: <GrAnnounce size={40} className="text-snyellow" />,
     name: "Digital Marketing",
     description:
       "Digital marketing is an obvious activity to attract your desired/targeted audience to promote your brand, product or services.",

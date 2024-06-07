@@ -17,15 +17,15 @@ const GetStarted = () => {
             Let's get Started
           </span>
           <div className="flex gap-10 w-full flex-wrap justify-between px-20 items-center">
-            <button className="bg-[#e1e507] text-[#f5f5f5] text-lg uppercase  font-semibold px-10 py-4 border-[1px] border-white flex gap-2 items-center">
+            <button className="bg-snyellow text-[#f5f5f5] text-lg uppercase  font-semibold px-10 py-4 border-[1px] border-white flex gap-2 items-center">
               <Phone />
               Call Us
             </button>
-            <button className="bg-[#e1e507] text-[#f5f5f5] text-lg uppercase  font-semibold px-10 py-4 border-[1px] border-white flex gap-2 items-center">
+            <button className="bg-snyellow text-[#f5f5f5] text-lg uppercase  font-semibold px-10 py-4 border-[1px] border-white flex gap-2 items-center">
               <Mail />
               Email Us
             </button>
-            <button className="bg-[#e1e507] text-[#f5f5f5] text-lg uppercase  font-semibold px-10 py-4 border-[1px] border-white flex gap-2 items-center">
+            <button className="bg-snyellow text-[#f5f5f5] text-lg uppercase  font-semibold px-10 py-4 border-[1px] border-white flex gap-2 items-center">
               <CircleHelp />
               Get Quote
             </button>

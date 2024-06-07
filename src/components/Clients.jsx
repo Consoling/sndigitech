@@ -60,7 +60,6 @@ const Clients = () => {
     };
   }, []);
 
-
   return (
     <section className="bg-white  ">
       <div className="flex pt-10 pb-5 mt-16 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 border-b-2">
@@ -117,8 +116,8 @@ const Clients = () => {
             parallax={true}
             navigation={isLarge}
             style={{
-              "--swiper-pagination-color": "#e1e507",
-              "--swiper-navigation-color": "#e1e507",
+              "--swiper-pagination-color": "#ffe500",
+              "--swiper-navigation-color": "#ffe500",
             }}
             pagination={{
               clickable: true,
@@ -150,7 +149,12 @@ const Clients = () => {
                     </span>
                   </div>
                   <div className="flex w-full mt-2 justify-center items-center flex-wrap px-5 text-center">
-                    <span className="font-raleway text-lg font-semibold tracking-wide text-white gap-2">-{client.name} | <span className="text-[#e1e507] font-raleway">{client.designation}</span></span>
+                    <span className="font-raleway text-lg font-semibold tracking-wide text-white gap-2">
+                      -{client.name} |{" "}
+                      <span className="text-[#e1e507] font-raleway">
+                        {client.designation}
+                      </span>
+                    </span>
                   </div>
                 </SwiperSlide>
               );
