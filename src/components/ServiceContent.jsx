@@ -58,8 +58,9 @@ const Content = ({ fetchedData }) => {
             <img
               src={fetchedData?.bannerBg}
               alt=""
-              className="h-full object-cover"
+              className={`h-full object-cover ${fetchedData?.className} `}
             />
+            {fetchedData?.bgDark ? <><div className="absolute inset-0 bg-black opacity-45 group-hover:opacity-70 transition-opacity ease-in-out duration-300"></div></> : null}
           </div>
           <div className="flex absolute top-0 h-full w-full justify-center items-center">
             <div className="w-full flex-col flex items-center">
@@ -159,8 +160,8 @@ const CardsContent = ({ cardHeading, cardsContent }) => {
   if (cardHeading && cardsContent) {
     return (
       <>
-        <section className="bg-[#f5f5f5] lg:pt-[0px] ">
-          <div className="flex py-20 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 text-center">
+        <section className="bg-[#f5f5f5] lg:pt-[0px] pb-10 ">
+          <div className="flex pt-16 pb-8 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 text-center">
             <h2 className="text-[40px] font-raleway text-[#222] font-bold  max-[660px]:text-[28px] ">
               {cardHeading}
             </h2>
@@ -195,10 +196,10 @@ const CardsContent = ({ cardHeading, cardsContent }) => {
                   <div className="flex w-full flex-col items-center justify-center py-5">
                     {item?.icon ? (
                       <>
-                        <img src={item.icon} className="w-24 h-24" />
+                        <img src={item.icon} className="w-24 h-24 py-3" />
                       </>
                     ) : null}
-                    <div className="w-10 h-1.5 rounded-md bg-snyellow"></div>
+                    <div className="w-10  h-1.5 rounded-md bg-snyellow"></div>
                     {item?.subheading ? (
                       <>
                         <h2 className="font-raleway text-xl font-semibold text-[#222] text-center pt-3">
@@ -206,8 +207,15 @@ const CardsContent = ({ cardHeading, cardsContent }) => {
                         </h2>
                       </>
                     ) : null}
+                    {item?.undersubheading ? (
+                      <>
+                      <h2 className="font-raleway text-xl font-semibold text-[#222] text-center pt-3">
+                          {item?.undersubheading}
+                        </h2>
+                      </>
+                    ): null}
                   </div>
-                  <div className="flex flex-row justify-center pt-3 px-10 h-[220px] max-[1174px]:h-[240px] ">
+                  <div className="flex flex-row justify-center pt-3 px-10 h-[220px]  max-[1174px]:h-[240px] ">
                     <span className="font-raleway text-sm tracking-wider lg:leading-relaxed md:leading-normal max-[580px]:leading-normal max-[580px]:text-sm">
                       {item.description}
                     </span>
@@ -237,3 +245,19 @@ const CardsContent = ({ cardHeading, cardsContent }) => {
     return null;
   }
 };
+
+
+const ExperienceContent = () => {
+  return (
+    <>
+    <section className=" lg:pt-[0px] pb-10 ">
+    <div className="flex pt-16 pb-8 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 text-center">
+            <h2 className="text-[40px] font-raleway text-[#222] font-bold  max-[660px]:text-[28px] ">
+              {cardHeading}
+            </h2>
+          </div>
+
+    </section>
+    </>
+  )
+}
