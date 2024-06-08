@@ -16,10 +16,12 @@ const ServiceContent = () => {
   const { pathId } = useParams();
   const [loading, setLoading] = useState(false);
   const [fetchedItem, setFetchedItem] = useState([]);
+  const [subCardContent, setSubCardContent] = useState();
   async function getPageInfo() {
     let selectedItem = svcsMain.find((serviceType) => serviceType.id == pathId);
     if (selectedItem) {
       setFetchedItem(selectedItem);
+      setSubCardContent(selectedItem?.subcardContent);
     } else {
       console.log("error");
     }
@@ -38,14 +40,18 @@ const ServiceContent = () => {
 
   return (
     <div>
-      {loading ? <PageLoader /> : <Content fetchedData={fetchedItem} />}
+      {loading ? (
+        <PageLoader />
+      ) : (
+        <Content fetchedData={fetchedItem} subCardContent={subCardContent} />
+      )}
     </div>
   );
 };
 
 export default ServiceContent;
 
-const Content = ({ fetchedData }) => {
+const Content = ({ fetchedData, subCardContent }) => {
   const writtenContent = fetchedData.content;
   const cardHeading = fetchedData?.cardsHead;
   const cardsContent = fetchedData?.cards;
@@ -60,7 +66,11 @@ const Content = ({ fetchedData }) => {
               alt=""
               className={`h-full object-cover ${fetchedData?.className} `}
             />
-            {fetchedData?.bgDark ? <><div className="absolute inset-0 bg-black opacity-45 group-hover:opacity-70 transition-opacity ease-in-out duration-300"></div></> : null}
+            {fetchedData?.bgDark ? (
+              <>
+                <div className="absolute inset-0 bg-black opacity-45 group-hover:opacity-70 transition-opacity ease-in-out duration-300"></div>
+              </>
+            ) : null}
           </div>
           <div className="flex absolute top-0 h-full w-full justify-center items-center">
             <div className="w-full flex-col flex items-center">
@@ -100,6 +110,7 @@ const Content = ({ fetchedData }) => {
 
         <WrittenContent writtenData={writtenContent} />
         <CardsContent cardHeading={cardHeading} cardsContent={cardsContent} />
+        <ExperienceContent subCardContent={subCardContent} />
       </div>
     </>
   ) : (
@@ -112,7 +123,6 @@ const Content = ({ fetchedData }) => {
 };
 
 const WrittenContent = ({ writtenData, compliQut }) => {
-  console.log(compliQut);
   return writtenData
     ? writtenData.map((item) => {
         return (
@@ -156,7 +166,6 @@ const WrittenContent = ({ writtenData, compliQut }) => {
 };
 
 const CardsContent = ({ cardHeading, cardsContent }) => {
-  console.log(cardHeading, cardsContent);
   if (cardHeading && cardsContent) {
     return (
       <>
@@ -209,11 +218,11 @@ const CardsContent = ({ cardHeading, cardsContent }) => {
                     ) : null}
                     {item?.undersubheading ? (
                       <>
-                      <h2 className="font-raleway text-xl font-semibold text-[#222] text-center pt-3">
+                        <h2 className="font-raleway text-xl font-semibold text-[#222] text-center pt-3">
                           {item?.undersubheading}
                         </h2>
                       </>
-                    ): null}
+                    ) : null}
                   </div>
                   <div className="flex flex-row justify-center pt-3 px-10 h-[220px]  max-[1174px]:h-[240px] ">
                     <span className="font-raleway text-sm tracking-wider lg:leading-relaxed md:leading-normal max-[580px]:leading-normal max-[580px]:text-sm">
@@ -246,18 +255,88 @@ const CardsContent = ({ cardHeading, cardsContent }) => {
   }
 };
 
-
-const ExperienceContent = () => {
-  return (
-    <>
-    <section className=" lg:pt-[0px] pb-10 ">
-    <div className="flex pt-16 pb-8 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 text-center">
+const ExperienceContent = ({ subCardContent }) => {
+  if (subCardContent !== undefined || subCardContent) {
+    return (
+      <>
+        <section className="bg-[#f5f5f5] lg:pt-[0px] pb-10 ">
+          <div className="flex pt-16 pb-8 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 text-center">
             <h2 className="text-[40px] font-raleway text-[#222] font-bold  max-[660px]:text-[28px] ">
-              {cardHeading}
+              {subCardContent?.subcardHeading}
             </h2>
           </div>
-
-    </section>
-    </>
-  )
-}
+          <div className="grid grid-cols-1 items-center  w-full gap-2 justify-center px-24 max-w-screen-xl mx-auto md:grid-cols-2 lg:grid-cols-3 md:px-10 sm:grid-cols-1 sm:px-2 my-5 py-10">
+            {subCardContent.subcardDetails?.map((item) => {
+              return (
+                <div
+                  className={`flex flex-col ${
+                    item.iconUrl ? "bg-transparent " : "bg-[#ffffff] border"
+                  } w-[380px] max-[1174px]:w-[320px] 
+                     lg:shadow-none shadow-md`}
+                  key={item.id}
+                >
+                  {item?.title ? (
+                    <>
+                      {" "}
+                      <div
+                        className={`flex justify-center flex-row font-bold  font-raleway py-4   ${
+                          item.id % 2 === 0
+                            ? "text-[#fff] bg-[#000]"
+                            : "text-[#222] bg-[#ffe500]"
+                        }`}
+                      >
+                        <span className="font-raleway text-[20px] leading-loose tracking-wide ">
+                          {item.title}
+                        </span>
+                      </div>
+                    </>
+                  ) : null}
+                  <div className="flex w-full flex-col items-center justify-center py-5">
+                    {item?.iconUrl ? (
+                      <>
+                        <img
+                          src={item?.iconUrl}
+                          className="w-24 h-24 py-3 px-5"
+                        />
+                      </>
+                    ) : null}
+                    <div className="w-10  h-1.5 rounded-md bg-snyellow"></div>
+                    {item?.content ? (
+                      <>
+                        <h2 className="font-raleway text-xl font-semibold text-[#222] text-center pt-3">
+                          {item?.content}
+                        </h2>
+                      </>
+                    ) : null}
+                    {item?.undersubheading ? (
+                      <>
+                        <h2 className="font-raleway text-xl font-semibold text-[#222] text-center pt-3">
+                          {item?.undersubheading}
+                        </h2>
+                      </>
+                    ) : null}
+                  </div>
+                
+                  <div className="flex flex-row justify-center items-center my-7  relative">
+                    {item?.link ? (
+                      <>
+                        <button
+                          className="px-5 py-1.5 border-2 z-10 border-[#222] uppercase tracking-wider font-raleway text-sm font-bold text-[#222] relative overflow-hidden 
+      hover:animate-color-change hover:drop-shadow-2xl"
+                        >
+                          <a href={item.link}>
+                            <span className="">Know More</span>
+                          </a>
+                        </button>
+                      </>
+                    ) : null}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      </>
+    );
+  } else return null;
+};

@@ -909,7 +909,7 @@ export const svcsMain = [
 
         subheading: "Raise Brand Awareness ",
         undersubheading: '(Followers)',
-        icon: "/seo-application-like-thumb-svgrepo-com.svg",
+        icon: "/people-group-svgrepo-com.svg",
         description:
         "Social media is considered the most viewed platform, which connects businesses to the audience. Our team builds an engaging campaign that includes an attractive post for increasing the number of followers. Every campaign is built as per client's business requirements which helps in analyzing how generated leads are using the platform.",
         },
@@ -918,7 +918,7 @@ export const svcsMain = [
           
           subheading: "Build Relationships ",
           undersubheading: '(Engagement)',
-          icon: "/seo-map-location-place-search-svgrepo-com.svg",
+          icon: "/handshake-svgrepo-com.svg",
           description:
           "We understand your need for developing strong connect with the audience, as this develops a health customer-buyer relationship. We will increase your customer engagement through attractive posts, news, and blogs. The more engagement you develop with the audience, the stronger you built a connection with the audience.",
           },
@@ -927,11 +927,41 @@ export const svcsMain = [
             
             subheading: "Increasing Exposure ",
             undersubheading: '(Traffic & Conversions)',
-        icon: "/local-search-svgrepo-com.svg",
+        icon: "/marketing-outline-people-svgrepo-com.svg",
         description:
           "Increment in website traffic leads to the increment in numbers of leads which increases the sales conversion rate. We analyze clients’ business, research on current and upcoming industry trends and then run advertisement campaigns that help businesses in gaining a large volume of traffic to their website.",
       },
       
     ],
+    subcardContent: {
+      subcardHeading: 'Our Experience & Expertise with Social Media Advertising',
+      subcardDetails: [
+        {
+          id: 1,
+          iconUrl: '/facebook-svgrepo-com.svg',
+          content: 'Facebook Ads'
+        },
+        {
+          id: 2,
+          iconUrl: '/instagram-svgrepo-com.svg',
+          content: 'Instagram Ads'
+        },
+        {
+          id: 3,
+          iconUrl: '/twitter-svgrepo-com.svg',
+          content: 'Twitter Ads'
+        },
+        {
+          id: 4,
+          iconUrl: '/linkedin-161-svgrepo-com.svg',
+          content: 'LinkedIn Ads'
+        },
+        {
+          id: 5,
+          iconUrl: '/recycle-svgrepo-com.svg',
+          content: 'Social Media Remarketing'
+        },
+      ],
+  },
   },
 ];
