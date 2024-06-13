@@ -18,12 +18,16 @@ const Banner = () => {
   return (
     <div className="flex w-full h-[80vh] max-[500px]:h-[90vh]">
       <div className="w-full h-full relative">
-        <img src="/banner.gif" className="h-full w-full object-cover" />
+      <video className="h-full w-full object-cover" autoPlay loop muted>
+    <source src="/home1.mp4" type="video/mp4" />
+ 
+  </video>
       </div>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
+        speed={1000}
         parallax={true}
         style={{
           "--swiper-pagination-color": "#e1e507",
@@ -45,7 +49,7 @@ const Banner = () => {
                 Introducing the Digital Transformers Empowering Global
                 Disruptors.
               </h1>
-              <span className="text-[17px]  font-medium text-[#424242] font-raleway leading-normal">
+              <span className="text-[17px]  font-medium text-white/80 font-raleway leading-normal">
                 We accelerate business expansion by reinventing digital
                 interactions that overcome intricate obstacles through
                 innovative solutions and adaptability.
@@ -60,7 +64,7 @@ const Banner = () => {
                 Driving Business Transformation with Innovative Software
                 Solutions and Technologies.
               </h1>
-              <span className="text-[17px]  font-medium text-[#424242] font-raleway leading-normal">
+              <span className="text-[17px]  font-medium text-white/80 font-raleway leading-normal">
                 Elevate your business with our legacy application modernization
                 services, enhancing design, functionality, architecture, and
                 technology stack.
