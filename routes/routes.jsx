@@ -1,34 +1,44 @@
-import { Routes, Route, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "../src/layout/Layout";
-import Home from "../pages/Home";
-import PreLoader from "../preloader/PreLoader";
-import About from "../pages/About";
-import Services from "../pages/Services";
-import Portfolio from "../pages/Portfolio";
-import PortfolioDetails from "../src/components/PortfolioDetails";
-import Industries from "../pages/Industries";
-import ContactUs from "../pages/ContactUs";
-import Quote from "../pages/Quote";
+
 import PageLoader from "../preloader/PageLoader";
+import Home from "../pages/Home";
+import { Suspense, lazy } from "react";
+
+const Loadable = (Component) => (props) => {
+  return (
+    <Suspense fallback={<PageLoader />}>
+      <Component {...props} />
+    </Suspense>
+  );
+};
+
+
+const About = Loadable(lazy(() => import("../pages/About.jsx")));
+const ContactUs = Loadable(lazy(() => import("../pages/ContactUs.jsx")));
+const Industries = Loadable(lazy(() => import("../pages/Industries.jsx")));
+const Services = Loadable(lazy(() => import("../pages/Services.jsx")));
+const Quote = Loadable(lazy(() => import("../pages/Quote.jsx")));
+const Portfolio = Loadable(lazy(() => import("../pages/Portfolio.jsx")));
+const PortfolioDetails = Loadable(lazy(() => import("../src/components/PortfolioDetails")));
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    // loader: <PreLoader />,
+ 
     children: [
       {
         path: "/",
-        element: <Home />, },
+        element: <Home />,
+      },
       { path: "/about-us", element: <About /> },
       { path: "/services/:pathId", element: <Services /> },
-      { path: "/portfolio", element: <Portfolio />},
+      { path: "/portfolio", element: <Portfolio /> },
       { path: "/portfolio/:link", element: <PortfolioDetails /> },
-      { path: "/industries", element: <Industries />},
+      { path: "/industries", element: <Industries /> },
       { path: "/contact-us", element: <ContactUs /> },
       { path: "/get-quote", element: <Quote /> },
-
-
     ],
   },
 ]);
