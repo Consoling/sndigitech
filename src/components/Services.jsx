@@ -59,16 +59,16 @@ const Services = () => {
   return (
     <>
       <section className="bg-white lg:pt-[0px] ">
-        <div className="flex py-10 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 border-b-2">
+        <div className="flex py-5 px-10 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 ">
           <h2 className="text-[48px] font-raleway text-[#222] font-semibold  max-[660px]:text-[30px] ">
             Services We Provide
           </h2>
         </div>
-        <div className="flex flex-wrap  px-24 max-[1024px]:px-10 max-[580px]:px-2 my-5 gap-3 justify-center">
+        <div className="flex flex-wrap  px-0 max-[1024px]:px-10 max-[580px]:px-2 my-5 gap-3 justify-center">
           {serviceList.map((item) => {
             return (
               <div
-                className="flex flex-col w-[480px] max-[1174px]:w-[390px] h-[480px] border lg:shadow-none shadow-md"
+                className="flex flex-col w-[420px] max-[1284px]:w-[370px] h-[480px]  lg:shadow-none shadow-md"
                 key={item.id}
               >
                 <div className="flex flex-row pt-10 justify-center">
@@ -105,7 +105,7 @@ const Services = () => {
           <img src="/home1.jpg" alt="" className="object-cover" />
         </div>
         <div className="lg:w-[50%] flex justify-start px-20 max-[580px]:px-10 py-16 flex-col">
-          <h1 className="font-raleway text-[50px] max-[580px]:text-[30px] tracking-wider font-bold text-[#222]">
+          <h1 className="font-raleway xl:text-[50px] min-[1281px]:text-[40px] max-[580px]:text-[30px] lg:font-extrabold text-[38px] font-extrabold tracking-wider xl:font-bold text-[#222]">
             SN Digitech Pvt. Ltd.
           </h1>
           <span className="py-10 text-base leading-relaxed font-raleway tracking-widest font-medium">

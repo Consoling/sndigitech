@@ -2,7 +2,7 @@ import React from "react";
 
 const Awards = () => {
   return (
-    <div className="mx-5 flex flex-row max-[1024px]:flex-col max-[1024px]:items-center justify-around my-10 lg:py-5 py-14   bg-[#f8f8f8]">
+    <div className="mx-0 flex flex-row max-[1024px]:flex-col max-[1024px]:items-center justify-around my-0 lg:py-0 py-14   bg-[#f8f8f8]">
       <div className="flex lg:w-[36%] max-[1024px]:h-[50%] lg:pl-20 max-[1024px]:justify-center ">
         <img
           src="/designrush.png"

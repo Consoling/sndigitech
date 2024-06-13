@@ -6,7 +6,7 @@ import ServicesDropdown from "./ServicesDropdown";
 
 const Navbar = () => {
   return (
-    <div className="flex py-6 justify-center items-center max-[1200px]:py-2 ">
+    <div className="flex py-2 justify-center items-center max-[1200px]:py-2 ">
       <div className="flex flex-row min-[1200px]:mx-14 mx-3 w-full py-2 justify-between flex-wrap">
         
         <div className="flex cursor-pointer  duration-300 transition-all max-[1200px]:gap-10 max-[500px]:gap-5">

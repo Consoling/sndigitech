@@ -130,19 +130,19 @@ const WrittenContent = ({ writtenData, compliQut }) => {
             <div className="flex flex-col  px-5">
               {/* 2nd part */}
               <div
-                className={`flex w-full lg:px-20 xl:px-52  flex-col py-10 items-center ${
+                className={`flex w-full lg:px-0 xl:px-0  flex-col py-5 items-center ${
                   item.id % 2 === 0 ? "lg:flex-row-reverse " : "lg:flex-row"
                 }`}
               >
                 <div className="lg:w-[70%] flex flex-col flex-wrap md:px-20 px-4  h-full">
-                  <h2 className="text-black font-raleway md:text-[40px]  font-bold  pt-8 max-[768px]:text-[20px]">
+                  <h2 className="text-black font-raleway md:text-[40px] mb-5 font-bold  pt-2 max-[768px]:text-[28px]">
                     {item?.descriptionHead}
                   </h2>
 
                   {item.descriptionContent.map((content) => {
                     return (
-                      <div key={content.id} className="xl:py-0  lg:py-2 mt-5">
-                        <span className="text-base tracking-normal font-raleway  mt-5 ">
+                      <div key={content.id} className="xl:py-0  lg:py-2 mt-0">
+                        <span className="text-base lg:leading-normal leading- tracking-normal font-raleway  mt-5 ">
                           {content.description}
                         </span>
                       </div>
@@ -170,12 +170,12 @@ const CardsContent = ({ cardHeading, cardsContent }) => {
     return (
       <>
         <section className="bg-[#f5f5f5] lg:pt-[0px] pb-10 ">
-          <div className="flex pt-16 pb-8 px-20 justify-center flex-row max-[660px]:px-5 max-[660px]:py-5 text-center">
+          <div className="flex pt-16 pb-8 px-20 justify-center flex-row max-[660px]:px-0 max-[660px]:py-5 text-center">
             <h2 className="text-[40px] font-raleway text-[#222] font-bold  max-[660px]:text-[28px] ">
               {cardHeading}
             </h2>
           </div>
-          <div className="grid grid-cols-1 items-center  w-full gap-10 justify-center px-24 max-w-screen-xl mx-auto md:grid-cols-2 lg:grid-cols-3 md:px-10 sm:grid-cols-1 sm:px-2 my-5 py-10">
+          <div className="grid grid-cols-1 items-center  w-full gap-10 justify-center px-7 max-w-screen-xl mx-auto md:grid-cols-2 lg:grid-cols-3 md:px-10 sm:grid-cols-1 sm:px-2 my-5 py-10">
             {cardsContent?.map((item) => {
               return (
                 <div
